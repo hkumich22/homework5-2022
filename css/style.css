@@ -1,3 +1,5 @@
+/* Animation. I think it's a distracting visual but the heart wants what it wants.*/
+
 @keyframes ourmove {
     from {
         opacity: 0;
@@ -12,6 +14,8 @@
     animation-name: ourmove;
     animation-duration: 5s;
   }
+
+  /* Lots of display stuff */
   body {
     font-family: "Poppins", serif;
     background: #f1f1f1;
@@ -61,11 +65,15 @@
     margin: 10px;
   }
 
+/* Now for media queries */
+
+/* For reduced motion */
 @media screen and (prefers-reduced-motion: reduce) {
     #logo {
         animation: none;
     }
 }
+/* For 900 px or larger */
 @media screen and (min-width: 900px) {
     header {
         display: flex;
@@ -88,6 +96,7 @@
         position: sticky;
     }
 }
+/* For printing. Remove images from gallery to save on ink, etc */
 @media print {
     body {
         font-family: Arial, Helvetica;
